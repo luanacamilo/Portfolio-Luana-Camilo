@@ -80,7 +80,7 @@ function Contact() {
                 </div>
                 <div>
                   <h4>Location</h4>
-                  <p>Brazil</p>
+                  <p>São Paulo - Brazil</p>
                 </div>
               </div>
 

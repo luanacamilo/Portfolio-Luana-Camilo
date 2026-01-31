@@ -60,7 +60,7 @@ function Hero() {
             <motion.a 
               href="#projects" 
               className="btn btn-primary"
-              whileHover={{ scale: 1.05, boxShadow: "0 5px 25px rgba(0, 255, 136, 0.4)" }}
+              whileHover={{ scale: 1.05, boxShadow: "0 5px 25px rgba(0, 168, 255, 0.4)" }}
               whileTap={{ scale: 0.95 }}
             >
               View Projects
@@ -68,7 +68,7 @@ function Hero() {
             <motion.a 
               href="#contact" 
               className="btn btn-secondary"
-              whileHover={{ scale: 1.05, backgroundColor: "var(--accent)", color: "var(--bg-dark)" }}
+              whileHover={{ scale: 1.05, backgroundColor: "var(--accent)", color: "#0a0a0a" }}
               whileTap={{ scale: 0.95 }}
             >
               Get In Touch

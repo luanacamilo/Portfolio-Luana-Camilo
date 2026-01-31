@@ -98,9 +98,9 @@ function Projects() {
               whileHover={{ 
                 y: -10, 
                 borderColor: "var(--accent)",
-                boxShadow: "0 15px 40px rgba(0, 255, 136, 0.15)"
+                boxShadow: "0 15px 40px rgba(0, 168, 255, 0.15)"
               }}
-              transition={{ duration: 0.3 }}
+              transition={{ duration: 0.15 }}
               onClick={() => setSelectedProject(project)}
             >
               <div className="project-content">

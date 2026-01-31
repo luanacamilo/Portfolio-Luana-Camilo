@@ -23,7 +23,7 @@
   color: var(--accent);
   display: block;
   margin-top: 10px;
-  text-shadow: 0 0 30px rgba(0, 255, 136, 0.5);
+  text-shadow: 0 0 30px rgba(0, 168, 255, 0.5);
 }
 
 .hero-subtitle {
@@ -57,13 +57,14 @@
 
 .btn-primary {
   background: var(--accent);
-  color: var(--bg-dark);
+  color: #0a0a0a;
 }
 
 .btn-primary:hover {
   background: var(--accent-hover);
+  color: #0a0a0a;
   transform: translateY(-2px);
-  box-shadow: 0 5px 20px rgba(0, 255, 136, 0.3);
+  box-shadow: 0 5px 20px rgba(0, 168, 255, 0.3);
 }
 
 .btn-secondary {
@@ -74,7 +75,7 @@
 
 .btn-secondary:hover {
   background: var(--accent);
-  color: var(--bg-dark);
+  color: #0a0a0a !important;
   transform: translateY(-2px);
 }
 
