@@ -60,7 +60,7 @@ function Header() {
               >
                 <motion.a 
                   onClick={() => scrollToSection(item === 'home' ? 'hero' : item)}
-                  whileHover={{ scale: 1.1, color: '#00ff88' }}
+                  whileHover={{ scale: 1.1, color: '#00a8ff' }}
                   whileTap={{ scale: 0.95 }}
                 >
                   {item.charAt(0).toUpperCase() + item.slice(1)}

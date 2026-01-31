@@ -18,9 +18,9 @@ function About() {
       ]
     },
     {
-      title: 'B.Tech – Computer Science',
-      company: 'University',
-      location: 'Brazil',
+      title: 'Computer Science',
+      company: 'FAM - Faculdade de Americana',
+      location: 'Americana, SP - Brazil',
       period: 'Ongoing',
       description: [
         'Focused on Full Stack development and software engineering',

@@ -45,7 +45,7 @@ function Skills() {
             className="skill-category"
             variants={cardVariants}
             whileHover={{ y: -10, borderColor: "var(--accent)" }}
-            transition={{ duration: 0.3 }}
+            transition={{ duration: 0.15 }}
           >
             <h3>Front-End</h3>
             <div className="skill-list">
@@ -74,7 +74,7 @@ function Skills() {
             className="skill-category"
             variants={cardVariants}
             whileHover={{ y: -10, borderColor: "var(--accent)" }}
-            transition={{ duration: 0.3 }}
+            transition={{ duration: 0.15 }}
           >
             <h3>Back-End & Data</h3>
             <div className="skill-list">
@@ -103,7 +103,7 @@ function Skills() {
             className="skill-category"
             variants={cardVariants}
             whileHover={{ y: -10, borderColor: "var(--accent)" }}
-            transition={{ duration: 0.3 }}
+            transition={{ duration: 0.15 }}
           >
             <h3>Tools & Practices</h3>
             <div className="skill-list">

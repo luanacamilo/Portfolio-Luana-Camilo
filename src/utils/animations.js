@@ -82,7 +82,7 @@ export const staggerFast = {
 export const hoverScale = {
   scale: 1.05,
   transition: {
-    duration: 0.3,
+    duration: 0.15,
     ease: "easeInOut"
   }
 }
@@ -90,25 +90,25 @@ export const hoverScale = {
 export const hoverLift = {
   y: -8,
   transition: {
-    duration: 0.3,
+    duration: 0.15,
     ease: "easeOut"
   }
 }
 
 export const navLinkHover = {
   scale: 1.1,
-  color: "#00ff88",
+  color: "#00a8ff",
   transition: {
-    duration: 0.2,
+    duration: 0.15,
     ease: "easeInOut"
   }
 }
 
 export const buttonHover = {
   scale: 1.05,
-  boxShadow: "0 5px 25px rgba(0, 255, 136, 0.4)",
+  boxShadow: "0 5px 25px rgba(0, 168, 255, 0.4)",
   transition: {
-    duration: 0.3,
+    duration: 0.15,
     ease: "easeInOut"
   }
 }
