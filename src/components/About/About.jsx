@@ -1,23 +1,42 @@
 import React from 'react'
+import { motion } from 'framer-motion'
+import { fadeInUp, fadeInLeft, staggerContainer } from '../../utils/animations'
 import './About.css'
 
 function About() {
   return (
     <section id="about" className="about">
       <div className="container">
-        <h2 className="section-title">About Me</h2>
-        <div className="about-content">
+        <motion.h2 
+          className="section-title"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6 }}
+        >
+          About Me
+        </motion.h2>
+        <motion.div 
+          className="about-content"
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={staggerContainer}
+        >
           <div className="about-text">
-            <p>
+            <motion.p variants={fadeInUp}>
               I am a Computer Science undergraduate with a strong interest in Full Stack development. 
               I have practical experience working with both Front-End and Back-End technologies, 
               allowing me to build complete, integrated, and scalable web solutions.
-            </p>
-            <p>
+            </motion.p>
+            <motion.p variants={fadeInUp}>
               I am particularly focused on writing clean, maintainable code and continuously 
               improving my technical and problem-solving skills.
-            </p>
-            <div className="about-experience">
+            </motion.p>
+            <motion.div 
+              className="about-experience"
+              variants={fadeInLeft}
+            >
               <h3>Professional Experience</h3>
               <div className="experience-item">
                 <h4>IT Intern — Full Stack Developer</h4>
@@ -30,9 +49,9 @@ function About() {
                   <li>Providing technical support to ensure system stability and continuity</li>
                 </ul>
               </div>
-            </div>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </section>
   )

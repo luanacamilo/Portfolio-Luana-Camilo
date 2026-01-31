@@ -82,24 +82,82 @@
   font-size: 1.2rem;
 }
 
+@media (max-width: 1024px) {
+  .about-content {
+    max-width: 800px;
+  }
+
+  .section-title {
+    font-size: 2.3rem;
+    margin-bottom: 50px;
+  }
+}
+
 @media (max-width: 768px) {
   .section-title {
     font-size: 2rem;
+    margin-bottom: 40px;
   }
 
   .about-text p {
     font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 18px;
+    padding: 0 5px;
   }
 
   .about-experience {
-    padding: 20px;
+    padding: 25px 20px;
+    margin-top: 30px;
   }
 
   .about-experience h3 {
     font-size: 1.5rem;
+    margin-bottom: 20px;
   }
 
   .experience-item h4 {
-    font-size: 1.1rem;
+    font-size: 1.15rem;
+    line-height: 1.4;
+  }
+
+  .company {
+    font-size: 1rem;
+  }
+
+  .period {
+    font-size: 0.9rem;
+  }
+
+  .experience-item li {
+    font-size: 0.95rem;
+    padding-left: 20px;
+    line-height: 1.6;
+  }
+}
+
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .about-text p {
+    font-size: 0.95rem;
+  }
+
+  .about-experience {
+    padding: 20px 15px;
+  }
+
+  .about-experience h3 {
+    font-size: 1.3rem;
+  }
+
+  .experience-item h4 {
+    font-size: 1.05rem;
+  }
+
+  .experience-item li {
+    font-size: 0.9rem;
   }
 }

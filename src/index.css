@@ -23,10 +23,12 @@ body {
   background-color: var(--bg-dark);
   color: var(--text-primary);
   line-height: 1.6;
+  overflow-x: hidden;
 }
 
 #root {
   min-height: 100vh;
+  overflow-x: hidden;
 }
 
 a {
@@ -58,9 +60,24 @@ img {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    max-width: 960px;
+    padding: 0 30px;
+  }
 }
 
 @media (max-width: 768px) {
+  .container {
+    max-width: 100%;
+    padding: 0 20px;
+  }
+}
+
+@media (max-width: 480px) {
   .container {
     padding: 0 15px;
   }
