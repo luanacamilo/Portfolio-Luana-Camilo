@@ -49,7 +49,7 @@ function Hero() {
           animate="animate"
         >
           <motion.h1 className="hero-title" variants={titleVariants}>
-            Hi, I'm <motion.span className="highlight" variants={highlightVariants}>Luana Alves Camilo</motion.span>
+            Hi, I'm <motion.span className="highlight" variants={highlightVariants}>Luana Camilo</motion.span>
           </motion.h1>
           <motion.p className="hero-subtitle" variants={fadeInUp}>Full Stack Developer</motion.p>
           <motion.p className="hero-description" variants={fadeInUp}>

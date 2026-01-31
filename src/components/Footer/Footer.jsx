@@ -15,7 +15,7 @@ function Footer() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <p>© {currentYear} Luana Alves Camilo. All rights reserved.</p>
+          <p>© {currentYear} Luana Camilo. All rights reserved.</p>
           <div className="footer-links">
             {[
               { href: 'https://github.com/luanacamilo', label: 'GitHub' },

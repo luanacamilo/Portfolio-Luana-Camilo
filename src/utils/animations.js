@@ -1,6 +1,4 @@
-// Animation variants for Framer Motion
 
-// Fade in from bottom
 export const fadeInUp = {
   initial: { 
     opacity: 0, 
@@ -16,7 +14,6 @@ export const fadeInUp = {
   }
 }
 
-// Fade in from left
 export const fadeInLeft = {
   initial: { 
     opacity: 0, 
@@ -32,7 +29,6 @@ export const fadeInLeft = {
   }
 }
 
-// Fade in from right
 export const fadeInRight = {
   initial: { 
     opacity: 0, 
@@ -48,7 +44,6 @@ export const fadeInRight = {
   }
 }
 
-// Scale fade in
 export const scaleIn = {
   initial: { 
     opacity: 0, 
@@ -64,7 +59,6 @@ export const scaleIn = {
   }
 }
 
-// Stagger children animation
 export const staggerContainer = {
   initial: {},
   animate: {
@@ -75,7 +69,6 @@ export const staggerContainer = {
   }
 }
 
-// Stagger with faster timing
 export const staggerFast = {
   initial: {},
   animate: {
@@ -86,7 +79,6 @@ export const staggerFast = {
   }
 }
 
-// Hover scale effect
 export const hoverScale = {
   scale: 1.05,
   transition: {
@@ -95,7 +87,6 @@ export const hoverScale = {
   }
 }
 
-// Hover lift effect
 export const hoverLift = {
   y: -8,
   transition: {
@@ -104,7 +95,6 @@ export const hoverLift = {
   }
 }
 
-// Navigation link hover
 export const navLinkHover = {
   scale: 1.1,
   color: "#00ff88",
@@ -114,7 +104,6 @@ export const navLinkHover = {
   }
 }
 
-// Button hover with glow
 export const buttonHover = {
   scale: 1.05,
   boxShadow: "0 5px 25px rgba(0, 255, 136, 0.4)",
@@ -124,7 +113,6 @@ export const buttonHover = {
   }
 }
 
-// Typing animation
 export const typewriter = {
   initial: { opacity: 0 },
   animate: { 
@@ -135,7 +123,6 @@ export const typewriter = {
   }
 }
 
-// Rotate in
 export const rotateIn = {
   initial: { 
     opacity: 0, 
@@ -153,7 +140,6 @@ export const rotateIn = {
   }
 }
 
-// Slide in from top
 export const slideDown = {
   initial: { 
     opacity: 0, 
@@ -169,7 +155,6 @@ export const slideDown = {
   }
 }
 
-// Page transition
 export const pageTransition = {
   initial: { opacity: 0 },
   animate: { 
