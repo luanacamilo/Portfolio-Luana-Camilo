@@ -4,6 +4,33 @@ import { fadeInUp, fadeInLeft, staggerContainer } from '../../utils/animations'
 import './About.css'
 
 function About() {
+  const journey = [
+    {
+      title: 'IT Intern — Full Stack Developer',
+      company: 'Duall Engenharia',
+      location: 'Brazil',
+      period: 'September 2025 – Present',
+      description: [
+        'Developing and maintaining web platforms using JavaScript, React, and PHP',
+        'Creating Python automation scripts to optimize internal processes',
+        'Integrating applications with relational databases and GraphQL',
+        'Providing technical support to ensure system stability and continuity'
+      ]
+    },
+    {
+      title: 'B.Tech – Computer Science',
+      company: 'University',
+      location: 'Brazil',
+      period: 'Ongoing',
+      description: [
+        'Focused on Full Stack development and software engineering',
+        'Building complete web applications with modern technologies',
+        'Learning advanced algorithms and data structures',
+        'Participating in coding competitions and hackathons'
+      ]
+    }
+  ]
+
   return (
     <section id="about" className="about">
       <div className="container">
@@ -33,21 +60,35 @@ function About() {
               I am particularly focused on writing clean, maintainable code and continuously 
               improving my technical and problem-solving skills.
             </motion.p>
+            
             <motion.div 
-              className="about-experience"
-              variants={fadeInLeft}
+              className="journey-section"
+              variants={fadeInUp}
             >
-              <h3>Professional Experience</h3>
-              <div className="experience-item">
-                <h4>IT Intern — Full Stack Developer</h4>
-                <p className="company">Duall Engenharia | Brazil</p>
-                <p className="period">September 2025 – Present</p>
-                <ul>
-                  <li>Developing and maintaining web platforms using JavaScript, React, and PHP</li>
-                  <li>Creating Python automation scripts to optimize internal processes</li>
-                  <li>Integrating applications with relational databases and GraphQL</li>
-                  <li>Providing technical support to ensure system stability and continuity</li>
-                </ul>
+              <h3>My Journey</h3>
+              <div className="journey-timeline">
+                {journey.map((item, index) => (
+                  <motion.div 
+                    key={index}
+                    className="journey-item"
+                    initial={{ opacity: 0, x: -50 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.2, duration: 0.5 }}
+                  >
+                    <div className="journey-marker"></div>
+                    <div className="journey-content">
+                      <h4>{item.title}</h4>
+                      <p className="journey-company">{item.company} | {item.location}</p>
+                      <p className="journey-period">{item.period}</p>
+                      <ul className="journey-description">
+                        {item.description.map((desc, idx) => (
+                          <li key={idx}>{desc}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  </motion.div>
+                ))}
               </div>
             </motion.div>
           </div>
