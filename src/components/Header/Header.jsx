@@ -32,14 +32,6 @@ function Header() {
     >
       <div className="container">
         <nav className="nav">
-          <motion.div 
-            className="logo"
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.2 }}
-          >
-            <h2>Luana Camilo</h2>
-          </motion.div>
-          
           <button 
             className={`menu-toggle ${isMenuOpen ? 'active' : ''}`}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
