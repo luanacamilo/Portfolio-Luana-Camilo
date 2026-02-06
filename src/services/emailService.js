@@ -1,4 +1,3 @@
-// Email Service using Nodemailer backend API
 class EmailService {
   constructor() {
     this.apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:3001/api'
@@ -19,7 +18,7 @@ class EmailService {
       if (response.ok && data.success) {
         return {
           success: true,
-          message: data.message || 'Message sent successfully! I will get back to you soon.'
+          message: data.message || 'Message sent successfully! I wilnpm run app dev  get back to you soon.'
         }
       } else {
         throw new Error(data.message || 'Failed to send message')
