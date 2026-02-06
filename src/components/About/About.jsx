@@ -23,10 +23,10 @@ function About() {
       location: 'Americana, SP - Brazil',
       period: 'Ongoing',
       description: [
-        'Focused on Full Stack development and software engineering',
-        'Building complete web applications with modern technologies',
-        'Learning advanced algorithms and data structures',
-        'Participating in coding competitions and hackathons'
+        'Undergraduate student focused on Full Stack development, software engineering, and data-driven solutions',
+        'Building complete web applications using modern technologies and best development practices',
+        'Studying data structures, algorithms, and problem-solving techniques',
+        'Participating in practical projects, coding challenges, and continuous technical learning'
       ]
     }
   ]
