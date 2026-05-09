@@ -1,10 +1,14 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { fadeInUp, fadeInLeft, staggerContainer } from '../../utils/animations'
+import { useLanguage } from '../../hooks/useLanguage'
 import './About.css'
 
 function About() {
-  const journey = [
+  const { t } = useLanguage()
+  const journeyData = t('about.journeyItems') || []
+
+  const defaultJourney = [
     {
       title: 'IT Intern — Full Stack Developer',
       company: 'Duall Engenharia',
@@ -31,6 +35,8 @@ function About() {
     }
   ]
 
+  const journey = Array.isArray(journeyData) && journeyData.length > 0 ? journeyData : defaultJourney
+
   return (
     <section id="about" className="about">
       <div className="container">
@@ -41,7 +47,7 @@ function About() {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6 }}
         >
-          About Me
+          {t('about.title')}
         </motion.h2>
         <motion.div 
           className="about-content"
@@ -52,22 +58,19 @@ function About() {
         >
           <div className="about-text">
             <motion.p variants={fadeInUp}>
-              I am a Computer Science undergraduate with a strong interest in Full Stack development. 
-              I have practical experience working with both Front-End and Back-End technologies, 
-              allowing me to build complete, integrated, and scalable web solutions.
+              {t('about.intro1')}
             </motion.p>
             <motion.p variants={fadeInUp}>
-              I am particularly focused on writing clean, maintainable code and continuously 
-              improving my technical and problem-solving skills.
+              {t('about.intro2')}
             </motion.p>
             
             <motion.div 
               className="journey-section"
               variants={fadeInUp}
             >
-              <h3>My Journey</h3>
+              <h3>{t('about.journey')}</h3>
               <div className="journey-timeline">
-                {journey.map((item, index) => (
+                {journey && journey.map((item, index) => (
                   <motion.div 
                     key={index}
                     className="journey-item"

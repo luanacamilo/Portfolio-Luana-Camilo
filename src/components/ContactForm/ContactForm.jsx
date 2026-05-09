@@ -2,10 +2,12 @@ import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { fadeInUp } from '../../utils/animations'
 import { validateForm } from '../../utils/validation'
+import { useLanguage } from '../../hooks/useLanguage'
 import emailService from '../../services/emailService'
 import './ContactForm.css'
 
 function ContactForm() {
+  const { t } = useLanguage()
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -19,7 +21,7 @@ function ContactForm() {
   const [submitStatus, setSubmitStatus] = useState(null)
 
   const subjectOptions = [
-    { value: '', label: 'Select a subject' },
+    { value: '', label: t('contact.form.subject') || 'Subject' },
     { value: 'project', label: 'Project Inquiry' },
     { value: 'job', label: 'Job Opportunity' },
     { value: 'collaboration', label: 'Collaboration' },
@@ -59,7 +61,7 @@ function ContactForm() {
       const result = await emailService.sendEmail(formData)
       
       if (result.success) {
-        setSubmitStatus({ type: 'success', message: result.message })
+        setSubmitStatus({ type: 'success', message: t('contact.form.success') })
         setFormData({
           firstName: '',
           lastName: '',
@@ -74,7 +76,7 @@ function ContactForm() {
     } catch (error) {
       setSubmitStatus({ 
         type: 'error', 
-        message: 'An unexpected error occurred. Please try again.' 
+        message: t('contact.form.error') 
       })
     } finally {
       setIsSubmitting(false)
@@ -93,7 +95,7 @@ function ContactForm() {
       <div className="form-row">
         <div className="form-group">
           <label htmlFor="firstName">
-            First Name <span className="required">*</span>
+            {t('contact.form.firstName')} <span className="required">*</span>
           </label>
           <input
             type="text"
@@ -112,7 +114,7 @@ function ContactForm() {
 
         <div className="form-group">
           <label htmlFor="lastName">
-            Last Name <span className="required">*</span>
+            {t('contact.form.lastName')} <span className="required">*</span>
           </label>
           <input
             type="text"
@@ -132,7 +134,7 @@ function ContactForm() {
 
       <div className="form-group">
         <label htmlFor="email">
-          Email <span className="required">*</span>
+          {t('contact.form.email')} <span className="required">*</span>
         </label>
         <input
           type="email"
@@ -151,7 +153,7 @@ function ContactForm() {
 
       <div className="form-group">
         <label htmlFor="subject">
-          Subject <span className="required">*</span>
+          {t('contact.form.subject')} <span className="required">*</span>
         </label>
         <select
           id="subject"
@@ -174,7 +176,7 @@ function ContactForm() {
 
       <div className="form-group">
         <label htmlFor="message">
-          Message <span className="required">*</span>
+          {t('contact.form.message')} <span className="required">*</span>
         </label>
         <textarea
           id="message"
@@ -212,10 +214,10 @@ function ContactForm() {
         {isSubmitting ? (
           <>
             <span className="spinner"></span>
-            Sending...
+            {t('contact.form.sending')}
           </>
         ) : (
-          'Send Message'
+          t('contact.form.send')
         )}
       </motion.button>
     </motion.form>

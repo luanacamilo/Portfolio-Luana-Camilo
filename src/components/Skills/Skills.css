@@ -22,12 +22,14 @@
   font-size: 1.5rem;
   color: var(--accent);
   margin-bottom: 20px;
+  text-align: center;
 }
 
 .skill-list {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  justify-content: center;
 }
 
 .skill-tag {
@@ -41,10 +43,35 @@
   cursor: pointer;
 }
 
+/* Tools-only style: show only proportional icons centered */
+.skill-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.6rem 0.4rem;
+}
+
+.icon-only .skill-icon {
+  font-size: 34px;
+  width: 40px;
+  height: 40px;
+}
+
+/* responsive adjustments */
 @media (max-width: 1024px) {
-  .skills-grid {
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 25px;
+  .icon-only .skill-icon {
+    font-size: 30px;
+    width: 34px;
+    height: 34px;
+  }
+}
+
+@media (max-width: 768px) {
+  .icon-only .skill-icon {
+    font-size: 24px;
+    width: 28px;
+    height: 28px;
   }
 }
 

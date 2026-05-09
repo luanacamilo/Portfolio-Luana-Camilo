@@ -1,9 +1,11 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { fadeInUp, staggerContainer } from '../../utils/animations'
+import { useLanguage } from '../../hooks/useLanguage'
 import './Hero.css'
 
 function Hero() {
+  const { t } = useLanguage()
   const containerVariants = {
     initial: {},
     animate: {
@@ -49,12 +51,11 @@ function Hero() {
           animate="animate"
         >
           <motion.h1 className="hero-title" variants={titleVariants}>
-            Hi, I'm <motion.span className="highlight" variants={highlightVariants}>Luana Camilo</motion.span>
+            {t('hero.greeting')} <motion.span className="highlight" variants={highlightVariants}>{t('hero.title')}</motion.span>
           </motion.h1>
-          <motion.p className="hero-subtitle" variants={fadeInUp}>Full Stack Developer</motion.p>
+          <motion.p className="hero-subtitle" variants={fadeInUp}>{t('hero.subtitle')}</motion.p>
           <motion.p className="hero-description" variants={fadeInUp}>
-            Developer with hands-on experience in web development and automation. 
-            Focused on creating complete, integrated, and scalable solutions with clean and maintainable code.
+            {t('hero.description')}
           </motion.p>
           <motion.div className="hero-buttons" variants={fadeInUp}>
             <motion.a 
@@ -63,7 +64,7 @@ function Hero() {
               whileHover={{ scale: 1.05, boxShadow: "0 5px 25px rgba(0, 168, 255, 0.4)" }}
               whileTap={{ scale: 0.95 }}
             >
-              View Projects
+              {t('hero.viewProjects')}
             </motion.a>
             <motion.a 
               href="#contact" 
@@ -71,7 +72,7 @@ function Hero() {
               whileHover={{ scale: 1.05, backgroundColor: "var(--accent)", color: "#0a0a0a" }}
               whileTap={{ scale: 0.95 }}
             >
-              Get In Touch
+              {t('hero.getInTouch')}
             </motion.a>
           </motion.div>
           <motion.div 

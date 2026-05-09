@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { slideDown } from '../../utils/animations'
+import { useLanguage } from '../../hooks/useLanguage'
+import { LanguageSwitcher } from '../LanguageSwitcher/LanguageSwitcher'
 import './Header.css'
 
 function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const { t } = useLanguage()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -63,11 +66,12 @@ function Header() {
                   whileHover={{ scale: 1.1, color: '#00a8ff' }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  {item.charAt(0).toUpperCase() + item.slice(1)}
+                  {t(`nav.${item}`)}
                 </motion.a>
               </motion.li>
             ))}
           </ul>
+          <LanguageSwitcher />
         </nav>
       </div>
     </motion.header>

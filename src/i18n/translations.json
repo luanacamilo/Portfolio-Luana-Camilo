@@ -1,0 +1,254 @@
+{
+  "pt_BR": {
+    "nav": {
+      "home": "Início",
+      "about": "Sobre",
+      "skills": "Habilidades",
+      "projects": "Projetos",
+      "contact": "Contato"
+    },
+    "hero": {
+      "greeting": "Olá, eu sou",
+      "title": "Luana Camilo",
+      "subtitle": "Full Stack Developer",
+      "description": "Desenvolvedora com experiência prática em desenvolvimento web e automação. Focada em criar soluções completas, integradas e escaláveis com código limpo e mantível.",
+      "viewProjects": "Ver Projetos",
+      "getInTouch": "Entrar em Contato"
+    },
+    "about": {
+      "title": "Sobre Mim",
+      "intro1": "Sou uma estudante de Ciência da Computação com forte interesse em desenvolvimento Full Stack. Tenho experiência prática trabalhando com tecnologias Front-End e Back-End, permitindo construir soluções web completas, integradas e escaláveis.",
+      "intro2": "Estou particularmente focada em escrever código limpo e mantível, continuamente melhorando meus conhecimentos técnicos e habilidades de resolução de problemas.",
+      "journey": "Minha Jornada",
+      "journeyItems": [
+        {
+          "title": "Estágio em TI — Desenvolvedor Full Stack",
+          "company": "Duall Engenharia",
+          "location": "Brasil",
+          "period": "Setembro 2025 – Presente",
+          "description": [
+            "Desenvolvendo e mantendo plataformas web usando JavaScript, React e PHP",
+            "Criando scripts de automação em Python para otimizar processos internos",
+            "Integrando aplicações com bancos de dados relacionais e GraphQL",
+            "Fornecendo suporte técnico para garantir estabilidade e continuidade do sistema"
+          ]
+        },
+        {
+          "title": "Ciência da Computação",
+          "company": "FAM - Faculdade de Americana",
+          "location": "Americana, SP - Brasil",
+          "period": "Em andamento",
+          "description": [
+            "Focado em desenvolvimento Full Stack e engenharia de software",
+            "Construindo aplicações web completas com tecnologias modernas",
+            "Aprendendo algoritmos avançados e estruturas de dados",
+            "Participando de competições de programação e hackathons"
+          ]
+        }
+      ]
+    },
+    "skills": {
+      "title": "Habilidades",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "tools": "Ferramentas"
+    },
+    "projects": {
+      "title": "Meus Projetos",
+      "viewDemo": "Ver Demo",
+      "viewCode": "Ver Código",
+      "projects": [
+        {
+          "title": "Plataforma Web Full Stack",
+          "description": "Desenvolvimento de uma plataforma web completa usando React, PHP e GraphQL, com integração de banco de dados relacional.",
+          "fullDescription": "Uma plataforma web full-stack abrangente com frontend moderno em React, backend robusto em PHP e tratamento eficiente de dados com GraphQL. Inclui autenticação de usuário, atualizações em tempo real e operações de banco de dados perfeitas com queries otimizadas e arquitetura escalável.",
+          "technologies": ["React", "JavaScript", "PHP", "GraphQL", "SQL", "REST APIs"],
+          "features": [
+            "Sistema de autenticação e autorização de usuários",
+            "Sincronização de dados em tempo real",
+            "Design de UI/UX responsivo e intuitivo",
+            "Integração de API RESTful",
+            "Otimização de banco de dados e performance de queries",
+            "Arquitetura escalável para crescimento futuro"
+          ]
+        },
+        {
+          "title": "Sistema de Automação",
+          "description": "Scripts em Python para automação de processos internos, otimizando fluxos de trabalho e reduzindo tempo de execução.",
+          "fullDescription": "Sistema de automação avançado construído com Python para agilizar processos de negócio internos. Inclui tarefas agendadas, geração automática de relatórios, pipelines de processamento de dados e integração perfeita com ferramentas existentes através de APIs.",
+          "technologies": ["Python", "Automação", "APIs", "Pandas", "Task Scheduling"],
+          "features": [
+            "Processamento e geração automática de relatórios",
+            "Integração com múltiplas APIs de terceiros",
+            "Execução de tarefas agendadas",
+            "Sistema de tratamento de erros e logging",
+            "Monitoramento e otimização de performance",
+            "Redução de trabalho manual em 70%"
+          ]
+        },
+        {
+          "title": "Interface React Moderna",
+          "description": "Desenvolvimento de interfaces modernas e responsivas com React, focando em experiência do usuário e performance.",
+          "fullDescription": "Uma aplicação React de última geração com ênfase em experiência do usuário, otimização de performance e acessibilidade. Apresenta animações suaves, lazy loading, code splitting e design responsivo que funciona perfeitamente em todos os dispositivos.",
+          "technologies": ["React", "JavaScript", "CSS3", "Design Responsivo", "Framer Motion", "Vite"],
+          "features": [
+            "Animações e transições suaves",
+            "Performance otimizada com code splitting",
+            "Totalmente responsivo em todos os dispositivos",
+            "Conformidade com acessibilidade (WCAG 2.1)",
+            "Estrutura amigável para SEO",
+            "Padrões de design moderno e melhores práticas"
+          ]
+        }
+      ]
+    },
+    "contact": {
+      "title": "Entre em Contato",
+      "subtitle": "Vamos conversar sobre projetos e oportunidades!",
+      "intro": "Sempre estou aberto a novas oportunidades e colaborações. Se você tem um projeto em mente ou quer conversar sobre tecnologia, ficarei feliz em ouvir você!",
+      "connectTitle": "Vamos nos Conectar",
+      "connectDescription": "Sempre aberto para discutir novas oportunidades, projetos interessantes, ou apenas conversar sobre tecnologia e desenvolvimento.",
+      "form": {
+        "firstName": "Nome",
+        "lastName": "Sobrenome",
+        "email": "Email",
+        "subject": "Assunto",
+        "message": "Mensagem",
+        "send": "Enviar",
+        "sending": "Enviando...",
+        "success": "Mensagem enviada com sucesso!",
+        "error": "Erro ao enviar mensagem. Tente novamente."
+      }
+    },
+    "footer": {
+      "rights": "Todos os direitos reservados.",
+      "made": "Feito com ❤️ por Luana Camilo"
+    }
+  },
+  "en": {
+    "nav": {
+      "home": "Home",
+      "about": "About",
+      "skills": "Skills",
+      "projects": "Projects",
+      "contact": "Contact"
+    },
+    "hero": {
+      "greeting": "Hi, I'm",
+      "title": "Luana Camilo",
+      "subtitle": "Full Stack Developer",
+      "description": "Developer with hands-on experience in web development and automation. Focused on creating complete, integrated, and scalable solutions with clean and maintainable code.",
+      "viewProjects": "View Projects",
+      "getInTouch": "Get In Touch"
+    },
+    "about": {
+      "title": "About Me",
+      "intro1": "I am a Computer Science undergraduate with a strong interest in Full Stack development. I have practical experience working with both Front-End and Back-End technologies, allowing me to build complete, integrated, and scalable web solutions.",
+      "intro2": "I am particularly focused on writing clean, maintainable code and continuously improving my technical and problem-solving skills.",
+      "journey": "My Journey",
+      "journeyItems": [
+        {
+          "title": "IT Intern — Full Stack Developer",
+          "company": "Duall Engenharia",
+          "location": "Brazil",
+          "period": "September 2025 – Present",
+          "description": [
+            "Developing and maintaining web platforms using JavaScript, React, and PHP",
+            "Creating Python automation scripts to optimize internal processes",
+            "Integrating applications with relational databases and GraphQL",
+            "Providing technical support to ensure system stability and continuity"
+          ]
+        },
+        {
+          "title": "Computer Science",
+          "company": "FAM - Faculdade de Americana",
+          "location": "Americana, SP - Brazil",
+          "period": "Ongoing",
+          "description": [
+            "Focused on Full Stack development and software engineering",
+            "Building complete web applications with modern technologies",
+            "Learning advanced algorithms and data structures",
+            "Participating in coding competitions and hackathons"
+          ]
+        }
+      ]
+    },
+    "skills": {
+      "title": "Skills",
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "tools": "Tools"
+    },
+    "projects": {
+      "title": "My Projects",
+      "viewDemo": "View Demo",
+      "viewCode": "View Code",
+      "projects": [
+        {
+          "title": "Full Stack Web Platform",
+          "description": "Development of a complete web platform using React, PHP, and GraphQL, with relational database integration.",
+          "fullDescription": "A comprehensive full-stack web platform featuring modern frontend with React, robust backend with PHP, and efficient data handling with GraphQL. Includes user authentication, real-time updates, and seamless database operations with optimized queries and scalable architecture.",
+          "technologies": ["React", "JavaScript", "PHP", "GraphQL", "SQL", "REST APIs"],
+          "features": [
+            "User authentication and authorization system",
+            "Real-time data synchronization",
+            "Responsive and intuitive UI/UX design",
+            "RESTful API integration",
+            "Database optimization and query performance",
+            "Scalable architecture for future growth"
+          ]
+        },
+        {
+          "title": "Automation System",
+          "description": "Python scripts for internal process automation, optimizing workflows and reducing task execution time.",
+          "fullDescription": "Advanced automation system built with Python to streamline internal business processes. Includes scheduled tasks, automated report generation, data processing pipelines, and seamless integration with existing tools through APIs.",
+          "technologies": ["Python", "Automation", "APIs", "Pandas", "Task Scheduling"],
+          "features": [
+            "Automated data processing and reporting",
+            "Integration with multiple third-party APIs",
+            "Scheduled task execution",
+            "Error handling and logging system",
+            "Performance monitoring and optimization",
+            "Reduced manual work by 70%"
+          ]
+        },
+        {
+          "title": "Modern React Interface",
+          "description": "Development of modern and responsive interfaces with React, focusing on user experience and performance.",
+          "fullDescription": "A cutting-edge React application with emphasis on user experience, performance optimization, and accessibility. Features smooth animations, lazy loading, code splitting, and responsive design that works seamlessly across all devices.",
+          "technologies": ["React", "JavaScript", "CSS3", "Responsive Design", "Framer Motion", "Vite"],
+          "features": [
+            "Smooth animations and transitions",
+            "Optimized performance with code splitting",
+            "Fully responsive across all devices",
+            "Accessibility compliance (WCAG 2.1)",
+            "SEO-friendly structure",
+            "Modern design patterns and best practices"
+          ]
+        }
+      ]
+    },
+    "contact": {
+      "title": "Get In Touch",
+      "subtitle": "Let's talk about projects and opportunities!",
+      "intro": "I'm always open to new opportunities and collaborations. If you have a project in mind or just want to talk about technology, I'd be happy to hear from you!",
+      "connectTitle": "Let's Connect",
+      "connectDescription": "I'm always open to discussing new opportunities, interesting projects, or just having a chat about technology and development.",
+      "form": {
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "email": "Email",
+        "subject": "Subject",
+        "message": "Message",
+        "send": "Send",
+        "sending": "Sending...",
+        "success": "Message sent successfully!",
+        "error": "Error sending message. Try again."
+      }
+    },
+    "footer": {
+      "rights": "All rights reserved.",
+      "made": "Made with ❤️ by Luana Camilo"
+    }
+  }
+}

@@ -1,10 +1,12 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { fadeInUp, staggerContainer } from '../../utils/animations'
+import { useLanguage } from '../../hooks/useLanguage'
 import ContactForm from '../ContactForm/ContactForm'
 import './Contact.css'
 
 function Contact() {
+  const { t } = useLanguage()
   const cardVariants = {
     initial: { opacity: 0, scale: 0.8 },
     animate: { 
@@ -27,7 +29,7 @@ function Contact() {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6 }}
         >
-          Get In Touch
+          {t('contact.title')}
         </motion.h2>
         
         <motion.div 
@@ -38,9 +40,7 @@ function Contact() {
           variants={staggerContainer}
         >
           <motion.p className="contact-intro" variants={fadeInUp}>
-            I'm always open to new opportunities and collaborations. 
-            If you have a project in mind or just want to talk about technology, 
-            I'd be happy to hear from you!
+            {t('contact.intro')}
           </motion.p>
         </motion.div>
 
@@ -52,10 +52,9 @@ function Contact() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h3>Let's Connect</h3>
+            <h3>{t('contact.connectTitle')}</h3>
             <p className="info-description">
-              I'm always open to discussing new opportunities, interesting projects, 
-              or just having a chat about technology and development.
+              {t('contact.connectDescription')}
             </p>
             
             <div className="info-items">
