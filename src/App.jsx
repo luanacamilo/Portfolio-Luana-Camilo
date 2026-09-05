@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { useLanguage } from './hooks/useLanguage'
+import About from './components/About/About'
+import Skills from './components/Skills/Skills'
 import './App.css'
 
 const fadeIn = {
@@ -38,6 +40,9 @@ const copyByLanguage = {
       'UI e performance',
     ],
     projectPeriods: ['Em andamento', 'Fluxos internos', 'Interface moderna'],
+    showMore: 'Mostrar mais',
+    showLess: 'Mostrar menos',
+    hiddenCount: (n) => `${n} ${n === 1 ? 'oculto' : 'ocultos'}`,
     skillsTitle: 'Ferramentas e stack',
     skillGroups: [
       {
@@ -55,12 +60,6 @@ const copyByLanguage = {
     ],
     experienceTitle: 'Experiência',
     experienceIntro: 'Onde venho construindo repertório técnico e de produto.',
-    recognitionTitle: 'Objetivos',
-    recognitionItems: [
-      'Crescer como desenvolvedora Full Stack em ambientes remotos e internacionais.',
-      'Aprofundar arquitetura de software, manutenção e qualidade de código.',
-      'Contribuir em produtos reais com times colaborativos e foco em impacto.',
-    ],
     contactTitle: 'Vamos construir algo bom.',
     contactText:
       'Estou aberta a oportunidades, freelas e projetos interessantes. O jeito mais rápido de me encontrar hoje é por e-mail, LinkedIn ou GitHub.',
@@ -117,6 +116,9 @@ const copyByLanguage = {
       'UI and performance',
     ],
     projectPeriods: ['Ongoing', 'Internal workflows', 'Modern interface'],
+    showMore: 'Show more',
+    showLess: 'Show less',
+    hiddenCount: (n) => `${n} hidden`,
     skillsTitle: 'Tools and stack',
     skillGroups: [
       {
@@ -134,12 +136,6 @@ const copyByLanguage = {
     ],
     experienceTitle: 'Experience',
     experienceIntro: 'Where I have been building technical and product depth.',
-    recognitionTitle: 'Goals',
-    recognitionItems: [
-      'Grow as a Full Stack developer in remote and international environments.',
-      'Deepen my software architecture, maintainability, and code quality skills.',
-      'Contribute to real products with collaborative teams and clear impact.',
-    ],
     contactTitle: "Let's build something good.",
     contactText:
       "I'm open to opportunities, freelance work, and interesting projects. The fastest way to reach me today is by email, LinkedIn, or GitHub.",
@@ -177,6 +173,9 @@ function App() {
   const aboutItems = t('about.journeyItems') || []
   const projects = t('projects.projects') || []
   const currentYear = new Date().getFullYear()
+  const [showAllExperience, setShowAllExperience] = useState(false)
+  const visibleExperience = showAllExperience ? aboutItems : aboutItems.slice(0, 2)
+  const hiddenExperienceCount = aboutItems.length - visibleExperience.length
 
   return (
     <div className="app-shell">
@@ -223,25 +222,56 @@ function App() {
           </a>
         </motion.section>
 
-        <motion.section id="about" className="content-section" {...fadeIn}>
-          <p className="section-kicker">{copy.aboutTitle}</p>
-          <h2>{t('about.title')}</h2>
-          <div className="two-column-copy">
-            <p>{t('about.intro1')}</p>
-            <p>{t('about.intro2')}</p>
-          </div>
+        <About />
 
-          <div className="subsection-heading">
-            <h3>{copy.glanceTitle}</h3>
-          </div>
-          <div className="glance-grid">
-            {copy.glanceItems.map(item => (
-              <div key={item.label} className="glance-card">
-                <span>{item.label}</span>
-                <strong>{item.value}</strong>
-              </div>
+        <motion.section id="experience" className="content-section" {...fadeIn}>
+          <p className="section-kicker">{copy.experienceTitle}</p>
+          <h2>{copy.experienceTitle}</h2>
+          <p className="section-intro">{copy.experienceIntro}</p>
+
+          <ol className="timeline-list">
+            {visibleExperience.map(item => (
+              <motion.li
+                key={`${item.title}-${item.company}`}
+                className="timeline-card"
+                initial={{ opacity: 0, y: 16 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.2 }}
+                transition={{ duration: 0.45, ease: 'easeOut' }}
+              >
+                <div className="timeline-icon" aria-hidden="true">
+                  {item.company.charAt(0)}
+                </div>
+                <div className="timeline-body">
+                  <span className="timeline-period">{item.period}</span>
+                  <h3 className="timeline-role">{item.title}</h3>
+                  <p className="timeline-company">@{item.company}</p>
+                  <ul className="timeline-points">
+                    {item.description.map(point => (
+                      <li key={point}>{point}</li>
+                    ))}
+                  </ul>
+                  {item.stack && <p className="timeline-stack">{item.stack}</p>}
+                </div>
+              </motion.li>
             ))}
-          </div>
+          </ol>
+
+          {aboutItems.length > 2 && (
+            <button
+              type="button"
+              className="timeline-toggle"
+              onClick={() => setShowAllExperience(prev => !prev)}
+            >
+              <span aria-hidden="true">{showAllExperience ? '˄' : '›'}</span>
+              {showAllExperience ? copy.showLess : copy.showMore}
+              {!showAllExperience && hiddenExperienceCount > 0 && (
+                <span className="timeline-toggle-count">
+                  {copy.hiddenCount(hiddenExperienceCount)}
+                </span>
+              )}
+            </button>
+          )}
         </motion.section>
 
         <motion.section id="projects" className="content-section" {...fadeIn}>
@@ -275,57 +305,7 @@ function App() {
           </div>
         </motion.section>
 
-        <motion.section id="skills" className="content-section" {...fadeIn}>
-          <p className="section-kicker">{copy.skillsLabel}</p>
-          <h2>{copy.skillsTitle}</h2>
-          <div className="skill-columns">
-            {copy.skillGroups.map(group => (
-              <div key={group.title} className="skill-column">
-                <h3>{group.title}</h3>
-                <ul>
-                  {group.items.map(item => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </motion.section>
-
-        <motion.section className="content-section" {...fadeIn}>
-          <p className="section-kicker">{copy.experienceTitle}</p>
-          <h2>{copy.experienceTitle}</h2>
-          <p className="section-intro">{copy.experienceIntro}</p>
-          <ol className="experience-list">
-            {aboutItems.map(item => (
-              <li key={`${item.title}-${item.company}`} className="experience-item">
-                <div className="experience-year">{item.period}</div>
-                <div className="experience-content">
-                  <h3>{item.company}</h3>
-                  <p className="experience-role">{item.title}</p>
-                  <p className="experience-location">{item.location}</p>
-                  <ul>
-                    {item.description.map(point => (
-                      <li key={point}>{point}</li>
-                    ))}
-                  </ul>
-                </div>
-              </li>
-            ))}
-          </ol>
-        </motion.section>
-
-        <motion.section className="content-section" {...fadeIn}>
-          <p className="section-kicker">{copy.recognitionTitle}</p>
-          <h2>{copy.recognitionTitle}</h2>
-          <div className="recognition-list">
-            {copy.recognitionItems.map(item => (
-              <div key={item} className="recognition-card">
-                <p>{item}</p>
-              </div>
-            ))}
-          </div>
-        </motion.section>
+        <Skills />
 
         <motion.section id="contact" className="content-section contact-section" {...fadeIn}>
           <div className="contact-panel">
@@ -352,7 +332,7 @@ function App() {
       <footer className="site-footer">
         <div>
           <a href="#home" className="footer-brand">
-            luanacamilo.dev
+            luanacamilo.com
           </a>
           <p>{copy.footerSummary}</p>
         </div>

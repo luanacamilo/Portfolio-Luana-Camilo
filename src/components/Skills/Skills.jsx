@@ -11,6 +11,25 @@ import './Skills.css'
 function Skills() {
   const { t } = useLanguage()
 
+  // All technologies for marquee
+  const allTechnologies = [
+    { name: 'JavaScript', icon: SiJavascript, color: '#f7df1e' },
+    { name: 'TypeScript', icon: SiTypescript, color: '#3178c6' },
+    { name: 'React', icon: SiReact, color: '#61dafb' },
+    { name: 'Next.js', icon: SiNextdotjs, color: '#ffffff' },
+    { name: 'Tailwind CSS', icon: SiTailwindcss, color: '#06b6d4' },
+    { name: 'Python', icon: SiPython, color: '#3776ab' },
+    { name: 'Node.js', icon: SiNodedotjs, color: '#68a063' },
+    { name: 'PHP', icon: SiPhp, color: '#777bb4' },
+    { name: 'SQL', icon: SiMysql, color: '#00758f' },
+    { name: 'MongoDB', icon: SiMongodb, color: '#13aa52' },
+    { name: 'GraphQL', icon: SiGraphql, color: '#e10098' },
+    { name: 'Git', icon: SiGit, color: '#f1502f' },
+    { name: 'GitHub', icon: SiGithub, color: '#ffffff' },
+    { name: 'Docker', icon: SiDocker, color: '#2496ed' },
+    { name: 'Vite', icon: SiVite, color: '#646cff' }
+  ]
+
   const categoryTranslationMap = {
     'Front-End': 'skills.frontend',
     'Back-End & Data': 'skills.backend',
@@ -84,6 +103,22 @@ function Skills() {
         >
           {t('skills.title')}
         </motion.h2>
+
+        {/* Marquee Section */}
+        <div className="marquee-container">
+          <div className="marquee-track">
+            {[...allTechnologies, ...allTechnologies].map((tech, index) => {
+              const IconComponent = tech.icon
+              return (
+                <div key={index} className="marquee-item">
+                  <IconComponent className="marquee-icon" style={{ color: tech.color }} />
+                  <span className="marquee-label">{tech.name}</span>
+                </div>
+              )
+            })}
+          </div>
+        </div>
+
         <motion.div 
           className="skills-grid"
           initial="initial"
@@ -107,15 +142,16 @@ function Skills() {
                   return (
                     <motion.div 
                       key={index}
-                      className="skill-item icon-only"
+                      className="skill-item"
                       variants={skillItemVariants}
-                      whileHover={{ scale: 1.12 }}
+                      whileHover={{ scale: 1.05 }}
                       transition={{ duration: 0.2 }}
                       title={skill.name}
                     >
                       <div className="skill-icon-wrapper">
                         <IconComponent className="skill-icon" style={{ color: skill.color }} />
                       </div>
+                      <span className="skill-name">{skill.name}</span>
                     </motion.div>
                   )
                 })}

@@ -1,41 +1,11 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { fadeInUp, fadeInLeft, staggerContainer } from '../../utils/animations'
+import { fadeInUp, staggerContainer } from '../../utils/animations'
 import { useLanguage } from '../../hooks/useLanguage'
 import './About.css'
 
 function About() {
   const { t } = useLanguage()
-  const journeyData = t('about.journeyItems') || []
-
-  const defaultJourney = [
-    {
-      title: 'IT Intern — Full Stack Developer',
-      company: 'Duall Engenharia',
-      location: 'Brazil',
-      period: 'September 2025 – Present',
-      description: [
-        'Developing and maintaining web platforms using JavaScript, React, and PHP',
-        'Creating Python automation scripts to optimize internal processes',
-        'Integrating applications with relational databases and GraphQL',
-        'Providing technical support to ensure system stability and continuity'
-      ]
-    },
-    {
-      title: 'Computer Science',
-      company: 'FAM - Faculdade de Americana',
-      location: 'Americana, SP - Brazil',
-      period: 'Ongoing',
-      description: [
-        'Focused on Full Stack development and software engineering',
-        'Building complete web applications with modern technologies',
-        'Learning advanced algorithms and data structures',
-        'Participating in coding competitions and hackathons'
-      ]
-    }
-  ]
-
-  const journey = Array.isArray(journeyData) && journeyData.length > 0 ? journeyData : defaultJourney
 
   return (
     <section id="about" className="about">
@@ -58,42 +28,20 @@ function About() {
         >
           <div className="about-text">
             <motion.p variants={fadeInUp}>
-              {t('about.intro1')}
+              Meu nome é <strong>Luana Alves Camilo</strong> e sou apaixonada por criar soluções digitais que conectam tecnologia e eficiência. Cursando Ciência da Computação (FAM), venho consolidando uma bagagem sólida no desenvolvimento Full-Stack, unindo fundamentos teóricos rigorosos à prática do mercado corporativo e de projetos autônomos.
             </motion.p>
+
             <motion.p variants={fadeInUp}>
-              {t('about.intro2')}
+              No desenvolvimento de software, meu foco principal é a entrega de produtos completos e robustos. No <em>Front-end</em>, busco criar interfaces dinâmicas e modernas utilizando React, TypeScript e Tailwind. No <em>Back-end</em>, tenho experiência na construção e manutenção de serviços com Node.js, Python, PHP e C++, garantindo uma comunicação fluida entre dados e interface através de APIs RESTful e GraphQL.
             </motion.p>
-            
-            <motion.div 
-              className="journey-section"
-              variants={fadeInUp}
-            >
-              <h3>{t('about.journey')}</h3>
-              <div className="journey-timeline">
-                {journey && journey.map((item, index) => (
-                  <motion.div 
-                    key={index}
-                    className="journey-item"
-                    initial={{ opacity: 0, x: -50 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.2, duration: 0.5 }}
-                  >
-                    <div className="journey-marker"></div>
-                    <div className="journey-content">
-                      <h4>{item.title}</h4>
-                      <p className="journey-company">{item.company} | {item.location}</p>
-                      <p className="journey-period">{item.period}</p>
-                      <ul className="journey-description">
-                        {item.description.map((desc, idx) => (
-                          <li key={idx}>{desc}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
+
+            <motion.p variants={fadeInUp}>
+              Uma das marcas da minha trajetória é a busca constante por otimização: desenvolvo rotinas de automação de processos (inclusive com Python e IA), crio scripts personalizados para integração de sistemas e atuo com conteinerização usando Docker.
+            </motion.p>
+
+            <motion.p variants={fadeInUp}>
+              Seja desenvolvendo um software do zero como freelancer ou otimizando pipelines e rotinas internas de engenharia, priorizo sempre a escrita de código limpo, a segurança das aplicações e o trabalho colaborativo sob versionamento constante. Estou pronta para contribuir em times de alta performance e continuar expandindo meus horizontes como desenvolvedora.
+            </motion.p>
           </div>
         </motion.div>
       </div>

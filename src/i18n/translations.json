@@ -25,24 +25,39 @@
           "title": "Estágio em TI — Desenvolvedor Full Stack",
           "company": "Duall Engenharia",
           "location": "Brasil",
-          "period": "Setembro 2025 – Presente",
+          "period": "SETEMBRO 2025 - ATUALMENTE",
+          "stack": "Principais tecnologias utilizadas: JavaScript, React, PHP, Python, GraphQL, SQL, Git, dentre outras.",
           "description": [
-            "Desenvolvendo e mantendo plataformas web usando JavaScript, React e PHP",
-            "Criando scripts de automação em Python para otimizar processos internos",
-            "Integrando aplicações com bancos de dados relacionais e GraphQL",
-            "Fornecendo suporte técnico para garantir estabilidade e continuidade do sistema"
+            "Desenvolvendo e mantendo plataformas web usando JavaScript, React e PHP;",
+            "Criando scripts de automação em Python para otimizar processos internos;",
+            "Integrando aplicações com bancos de dados relacionais e GraphQL;",
+            "Fornecendo suporte técnico para garantir estabilidade e continuidade do sistema."
+          ]
+        },
+        {
+          "title": "Desenvolvedora Freelancer",
+          "company": "Projetos Autônomos",
+          "location": "Remoto",
+          "period": "MARÇO 2024 - AGOSTO 2025",
+          "stack": "Principais tecnologias utilizadas: React, Node.js, TypeScript, Tailwind CSS, MongoDB, Docker, dentre outras.",
+          "description": [
+            "Desenvolvimento de aplicações web sob demanda para pequenos negócios e clientes independentes;",
+            "Criação de interfaces responsivas e modernas com React e Tailwind CSS;",
+            "Construção de APIs REST com Node.js e persistência de dados em MongoDB;",
+            "Conteinerização de aplicações com Docker para facilitar deploy e manutenção."
           ]
         },
         {
           "title": "Ciência da Computação",
           "company": "FAM - Faculdade de Americana",
           "location": "Americana, SP - Brasil",
-          "period": "Em andamento",
+          "period": "EM ANDAMENTO",
+          "stack": "Principais áreas de estudo: algoritmos, estruturas de dados, engenharia de software, banco de dados.",
           "description": [
-            "Focado em desenvolvimento Full Stack e engenharia de software",
-            "Construindo aplicações web completas com tecnologias modernas",
-            "Aprendendo algoritmos avançados e estruturas de dados",
-            "Participando de competições de programação e hackathons"
+            "Focado em desenvolvimento Full Stack e engenharia de software;",
+            "Construindo aplicações web completas com tecnologias modernas;",
+            "Aprendendo algoritmos avançados e estruturas de dados;",
+            "Participando de competições de programação e hackathons."
           ]
         }
       ]
@@ -151,24 +166,39 @@
           "title": "IT Intern — Full Stack Developer",
           "company": "Duall Engenharia",
           "location": "Brazil",
-          "period": "September 2025 – Present",
+          "period": "SEPTEMBER 2025 - PRESENT",
+          "stack": "Main technologies used: JavaScript, React, PHP, Python, GraphQL, SQL, Git, among others.",
           "description": [
-            "Developing and maintaining web platforms using JavaScript, React, and PHP",
-            "Creating Python automation scripts to optimize internal processes",
-            "Integrating applications with relational databases and GraphQL",
-            "Providing technical support to ensure system stability and continuity"
+            "Developing and maintaining web platforms using JavaScript, React, and PHP;",
+            "Creating Python automation scripts to optimize internal processes;",
+            "Integrating applications with relational databases and GraphQL;",
+            "Providing technical support to ensure system stability and continuity."
+          ]
+        },
+        {
+          "title": "Freelance Developer",
+          "company": "Independent Projects",
+          "location": "Remote",
+          "period": "MARCH 2024 - AUGUST 2025",
+          "stack": "Main technologies used: React, Node.js, TypeScript, Tailwind CSS, MongoDB, Docker, among others.",
+          "description": [
+            "Built on-demand web applications for small businesses and independent clients;",
+            "Created responsive, modern interfaces with React and Tailwind CSS;",
+            "Built REST APIs with Node.js and persisted data with MongoDB;",
+            "Containerized applications with Docker to ease deployment and maintenance."
           ]
         },
         {
           "title": "Computer Science",
           "company": "FAM - Faculdade de Americana",
           "location": "Americana, SP - Brazil",
-          "period": "Ongoing",
+          "period": "ONGOING",
+          "stack": "Main areas of study: algorithms, data structures, software engineering, databases.",
           "description": [
-            "Focused on Full Stack development and software engineering",
-            "Building complete web applications with modern technologies",
-            "Learning advanced algorithms and data structures",
-            "Participating in coding competitions and hackathons"
+            "Focused on Full Stack development and software engineering;",
+            "Building complete web applications with modern technologies;",
+            "Learning advanced algorithms and data structures;",
+            "Participating in coding competitions and hackathons."
           ]
         }
       ]
