@@ -1,6 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { fadeInUp, staggerContainer } from '../../utils/animations'
+import { useLanguage } from '../../hooks/useLanguage'
 import {
   SiJavascript, SiTypescript, SiReact, SiPython, SiNodedotjs,
   SiPhp, SiMysql, SiGraphql, SiGit, SiGithub, SiVite, SiNextdotjs, SiTailwindcss, SiDocker, SiMongodb
@@ -8,6 +9,32 @@ import {
 import './Skills.css'
 
 function Skills() {
+  const { t } = useLanguage()
+
+  // All technologies for marquee
+  const allTechnologies = [
+    { name: 'JavaScript', icon: SiJavascript, color: '#f7df1e' },
+    { name: 'TypeScript', icon: SiTypescript, color: '#3178c6' },
+    { name: 'React', icon: SiReact, color: '#61dafb' },
+    { name: 'Next.js', icon: SiNextdotjs, color: '#ffffff' },
+    { name: 'Tailwind CSS', icon: SiTailwindcss, color: '#06b6d4' },
+    { name: 'Python', icon: SiPython, color: '#3776ab' },
+    { name: 'Node.js', icon: SiNodedotjs, color: '#68a063' },
+    { name: 'PHP', icon: SiPhp, color: '#777bb4' },
+    { name: 'SQL', icon: SiMysql, color: '#00758f' },
+    { name: 'MongoDB', icon: SiMongodb, color: '#13aa52' },
+    { name: 'GraphQL', icon: SiGraphql, color: '#e10098' },
+    { name: 'Git', icon: SiGit, color: '#f1502f' },
+    { name: 'GitHub', icon: SiGithub, color: '#ffffff' },
+    { name: 'Docker', icon: SiDocker, color: '#2496ed' },
+    { name: 'Vite', icon: SiVite, color: '#646cff' }
+  ]
+
+  const categoryTranslationMap = {
+    'Front-End': 'skills.frontend',
+    'Back-End & Data': 'skills.backend',
+    'Tools & Practices': 'skills.tools'
+  }
   const skillsData = [
     {
       category: 'Front-End',
@@ -58,7 +85,9 @@ function Skills() {
     animate: { 
       opacity: 1, 
       scale: 1,
-      transition: { duration: 0.3 }
+      transition: {
+        duration: 0.3
+      }
     }
   }
 
@@ -72,8 +101,24 @@ function Skills() {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6 }}
         >
-          Technical Skills
+          {t('skills.title')}
         </motion.h2>
+
+        {/* Marquee Section */}
+        <div className="marquee-container">
+          <div className="marquee-track">
+            {[...allTechnologies, ...allTechnologies].map((tech, index) => {
+              const IconComponent = tech.icon
+              return (
+                <div key={index} className="marquee-item">
+                  <IconComponent className="marquee-icon" style={{ color: tech.color }} />
+                  <span className="marquee-label">{tech.name}</span>
+                </div>
+              )
+            })}
+          </div>
+        </div>
+
         <motion.div 
           className="skills-grid"
           initial="initial"
@@ -89,16 +134,17 @@ function Skills() {
               whileHover={{ y: -10 }}
               transition={{ duration: 0.15 }}
             >
-              <h3>{skillGroup.category}</h3>
+              <h3>{t(categoryTranslationMap[skillGroup.category])}</h3>
               <div className="skill-list">
                 {skillGroup.skills.map((skill, index) => {
                   const IconComponent = skill.icon
+
                   return (
                     <motion.div 
                       key={index}
                       className="skill-item"
                       variants={skillItemVariants}
-                      whileHover={{ scale: 1.15, y: -5 }}
+                      whileHover={{ scale: 1.05 }}
                       transition={{ duration: 0.2 }}
                       title={skill.name}
                     >

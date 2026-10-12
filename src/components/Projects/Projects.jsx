@@ -1,13 +1,15 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 import { fadeInUp, staggerContainer } from '../../utils/animations'
+import { useLanguage } from '../../hooks/useLanguage'
 import ProjectModal from '../ProjectModal/ProjectModal'
 import './Projects.css'
 
 function Projects() {
+  const { t } = useLanguage()
   const [selectedProject, setSelectedProject] = useState(null)
 
-  const projects = [
+  const projectsBase = [
     {
       title: 'Full Stack Web Platform',
       description: 'Development of a complete web platform using React, PHP, and GraphQL, with relational database integration.',
@@ -61,6 +63,8 @@ function Projects() {
     }
   ]
 
+  const projects = projectsBase
+
   return (
     <section id="projects" className="projects">
       <div className="container">
@@ -71,7 +75,7 @@ function Projects() {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6 }}
         >
-          My Projects
+          {t('projects.title')}
         </motion.h2>
         <motion.p 
           className="projects-intro"
