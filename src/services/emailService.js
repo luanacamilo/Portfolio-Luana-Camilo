@@ -1,13 +1,10 @@
-// Email Service using Nodemailer backend API
 class EmailService {
   constructor() {
-    // Backend API URL - change this for production
     this.apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:3001/api'
   }
 
   async sendEmail(formData) {
     try {
-      // Send request to backend API
       const response = await fetch(`${this.apiUrl}/send-email`, {
         method: 'POST',
         headers: {
@@ -21,7 +18,7 @@ class EmailService {
       if (response.ok && data.success) {
         return {
           success: true,
-          message: data.message || 'Message sent successfully! I will get back to you soon.'
+          message: data.message || 'Message sent successfully! I wilnpm run app dev  get back to you soon.'
         }
       } else {
         throw new Error(data.message || 'Failed to send message')
@@ -29,7 +26,6 @@ class EmailService {
     } catch (error) {
       console.error('Email sending error:', error)
       
-      // Check if it's a network error
       if (error.message === 'Failed to fetch') {
         return {
           success: false,
@@ -44,7 +40,6 @@ class EmailService {
     }
   }
 
-  // Health check to verify backend is running
   async checkHealth() {
     try {
       const response = await fetch(`${this.apiUrl}/health`)

@@ -74,11 +74,16 @@
 }
 
 .skill-category {
-  padding: 30px;
+  padding: 40px;
   background: var(--bg-dark);
-  border-radius: 12px;
+  border-radius: 16px;
   border: 1px solid var(--border);
   transition: all 0.3s ease;
+}
+
+.skill-category:hover {
+  border-color: var(--accent);
+  box-shadow: 0 8px 32px rgba(0, 168, 255, 0.1);
 }
 
 .skill-category h3 {
@@ -96,15 +101,52 @@
   justify-content: center;
 }
 
-.skill-tag {
-  padding: 8px 16px;
-  background: var(--bg-card);
-  border: 1px solid var(--border);
-  border-radius: 20px;
-  color: var(--text-primary);
-  font-size: 0.9rem;
+.skill-item:hover {
+  transform: translateY(-5px);
+}
+
+.skill-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  background: transparent;
   transition: all 0.3s ease;
-  cursor: pointer;
+}
+
+.skill-item:hover .skill-icon-wrapper {
+  transform: scale(1.2);
+}
+
+.skill-icon {
+  font-size: 40px;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 0 6px rgba(0, 168, 255, 0.4));
+}
+
+.skill-item:hover .skill-icon {
+  filter: drop-shadow(0 0 12px rgba(0, 168, 255, 0.6));
+}
+
+.skill-name {
+  font-size: 0.8rem;
+  color: var(--text-primary);
+  font-weight: 500;
+  transition: all 0.3s ease;
+  opacity: 0;
+  position: absolute;
+  bottom: -28px;
+  white-space: nowrap;
+  background: var(--bg-dark);
+  padding: 6px 12px;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+}
+
+.skill-item:hover .skill-name {
+  opacity: 1;
 }
 
 /* Skill items with icon and name */
@@ -164,6 +206,15 @@
   .skill-name {
     font-size: 0.7rem;
   }
+
+  .skill-category {
+    padding: 35px;
+  }
+
+  .skill-category h3 {
+    font-size: 1.3rem;
+    margin-bottom: 25px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -196,7 +247,7 @@
   }
 
   .skill-category {
-    padding: 25px 20px;
+    padding: 30px;
   }
 
   .skill-category h3 {
@@ -218,23 +269,34 @@
     font-size: 0.65rem;
   }
 
-  .skill-tag {
-    padding: 7px 14px;
-    font-size: 0.85rem;
+  .skill-icon-wrapper {
+    width: 55px;
+    height: 55px;
+  }
+
+  .skill-icon {
+    font-size: 32px;
+  }
+
+  .skill-name {
+    font-size: 0.75rem;
   }
 }
 
 @media (max-width: 480px) {
+  .skills {
+    padding: 60px 0;
+  }
+
   .skill-category {
-    padding: 20px 15px;
+    padding: 25px;
   }
 
   .skill-category h3 {
     font-size: 1.1rem;
   }
 
-  .skill-tag {
-    padding: 6px 12px;
-    font-size: 0.8rem;
+  .skill-name {
+    font-size: 0.7rem;
   }
 }
